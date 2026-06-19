@@ -95,4 +95,4 @@ const highestMarks = marks.reduce((acc, curr) => {
     return acc > curr ? acc : curr;
 }, 0);
 
-console.log(highestMarks);
+console.log(highestMarks); 
