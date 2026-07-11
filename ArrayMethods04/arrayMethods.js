@@ -23,11 +23,26 @@ console.log(fruits);
 // Expected:
 // [10, 20, 30, 40]
 
-const numbers = [];
+// const numbers = [];
 
-numbers.push(10);
-numbers.push(20);
-numbers.push(30);
-numbers.push(40);
+// numbers.push(10);
+// numbers.push(20);
+// numbers.push(30);
+// numbers.push(40);
 
-console.log(numbers);
+// console.log(numbers);
+
+// Task 3
+// const users = ["Rajat"];
+// Add:
+// "Amit"
+// "Rahul"
+// Expected:
+// ["Rajat", "Amit", "Rahul"]
+
+const users = ["Rajat"];
+
+users.push("Amit");
+users.push("Rahul");
+
+console.log(users);
