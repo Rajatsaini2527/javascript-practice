@@ -77,6 +77,7 @@ const countEvenAndOdd = (arr) => {
 const arr = [4,2,6,7,9,6,4,9,5,2,];
 countEvenAndOdd(arr)
  
+
 // Reverse an array.
  
 const arrayReverse = (arr) => {
@@ -86,3 +87,54 @@ const arrayReverse = (arr) => {
 }
  
 arrayReverse(arr);
+ 
+// Sort an array in ascending order.
+ 
+const ascendingOrder = (arr) => {
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                let temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    console.log(arr);
+}
+ 
+ascendingOrder(arr);
+ 
+// Sort an array in descending order.
+ 
+const descendingOrder = (arr) =>{
+    for (let i = 0; i < arr.length; i++){
+        for(let j = 0; j < arr.length - 1; j++){
+            if(arr[j] < arr[j+1]){
+                let temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+    console.log(arr);
+}
+descendingOrder(arr);
+ 
+// Find the second largest element in an array.
+ 
+const secondLargestNumber = (arr) => {
+    let largest = arr[0];
+    let secondLargest = arr[0];
+ 
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > largest) {
+            secondLargest = largest;
+            largest = arr[i];
+        } else if (arr[i] > secondLargest && arr[i] !== largest) {
+            secondLargest = arr[i];
+        }
+    }
+    console.log(secondLargest);
+}
+secondLargestNumber(arr);
