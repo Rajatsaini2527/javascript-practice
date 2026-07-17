@@ -1,6 +1,6 @@
 // Find the largest element in an array.
  
-const arr = [4,2,6,7,9,6,4,9,5,2,];
+let arr = [4,2,6,7,9,6,4,9,5,2,];
 const findLargestNumber = (arr) => {
     let largest = arr[0];
     for (let i = 1; i < arr.length; i++) {
@@ -8,7 +8,7 @@ const findLargestNumber = (arr) => {
             largest = arr[i];
         }
     }
-     console.log(largest)
+    //  console.log(largest)
 };
 findLargestNumber(arr)
  
@@ -21,7 +21,7 @@ const findSmallestNumber = (arr) => {
       smallest = arr[i];
     }
   }
-  console.log(smallest);
+//   console.log(smallest);
 }
  
 findSmallestNumber(arr);
@@ -34,7 +34,7 @@ const sumOfAllElements = (arr) => {
   for(let i = 0; i < arr.length; i++){
     sum += arr[i];
   }
-  console.log(sum);
+//   console.log(sum);
 }
  
 sumOfAllElements(arr);
@@ -51,7 +51,7 @@ const findAverageNumber = (arr) => {
  
   averag = sum % arr.length;
  
-  console.log(averag);
+//   console.log(averag);
 }
  
 findAverageNumber(arr);
@@ -71,18 +71,17 @@ const countEvenAndOdd = (arr) => {
       odd  ++;
     }
   }
-  console.log(`Even numbers: ${even}, Odd numbers: ${odd}`);
+//   console.log(`Even numbers: ${even}, Odd numbers: ${odd}`);
 }
  
-const arr = [4,2,6,7,9,6,4,9,5,2,];
 countEvenAndOdd(arr)
  
 
-// Reverse an array.
+// Reverse an array.`
  
 const arrayReverse = (arr) => {
   for(let i = arr.length -1; i >= 0; i--){
-    console.log(arr[i]);
+    // console.log(arr[i]);
   }
 }
  
@@ -100,7 +99,7 @@ const ascendingOrder = (arr) => {
             }
         }
     }
-    console.log(arr);
+    // console.log(arr);
 }
  
 ascendingOrder(arr);
@@ -117,7 +116,7 @@ const descendingOrder = (arr) =>{
             }
         }
     }
-    console.log(arr);
+    // console.log(arr);
 }
 descendingOrder(arr);
  
@@ -135,6 +134,16 @@ const secondLargestNumber = (arr) => {
             secondLargest = arr[i];
         }
     }
-    console.log(secondLargest);
+    // console.log(secondLargest);
 }
 secondLargestNumber(arr);
+
+// Print all elements using a for loop.
+
+const printAllElements = (arr) => {
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+    }
+}
+
+printAllElements(arr)
