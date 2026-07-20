@@ -147,3 +147,5 @@ const printAllElements = (arr) => {
 }
 
 printAllElements(arr)
+
+
