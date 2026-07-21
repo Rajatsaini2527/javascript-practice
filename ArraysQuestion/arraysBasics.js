@@ -149,3 +149,86 @@ const printAllElements = (arr) => {
 printAllElements(arr)
 
 
+// Find the second largest element in an array.
+
+const findSecondLargest = (arr) => {
+ 
+  let largest = 0;
+  let secondLargest = 0;
+ 
+  for (let i = 0; i < arr.length; i++) {
+ 
+    if (arr[i] > largest) {
+      secondLargest = largest;
+      largest = arr[i];
+    }else if(arr[i] > secondLargest && arr[i] !== largest){
+        secondLargest = arr[i];
+    }
+ 
+  }
+  console.log(secondLargest);
+}
+ 
+findSecondLargest(arr);
+const target = 15;
+ 
+// Search for an element in an array (Linear Search).
+
+const linearSearch = (arr, target) => {
+ 
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) {
+      return i;
+    }
+  }
+  return - 1; // Element not found
+ 
+}
+ 
+const result = linearSearch(arr, target);
+ 
+if(result !== -1){
+  console.log(`Element found at index ${result}`);
+} else {
+    console.log("Element not found");
+}
+
+// Remove duplicate elements from an array.
+ 
+const removeDuplicateElements = (arr) => {
+let result = [];
+  for(let i = 0; i < arr.length; i++){
+    let isDublicate = false;
+    for(let j = 0; j < result.length; j++){
+      if(arr[i] === result[j]){
+        isDublicate = true;
+        break;
+      }
+    }
+    if(!isDublicate){
+      result.push(arr[i]);
+    }
+  }
+return result;
+}
+ 
+console.log(removeDuplicateElements(arr));
+
+// Find the frequency of each element in an array.
+ 
+const frequencyEachElement = (arr) => {
+ 
+  const frequency = {}
+ 
+  for (let i = 0; i < arr.length; i++) {
+    if (frequency[arr[i]]) {
+      frequency[arr[i]]++;
+    } else {
+      frequency[arr[i]] = 1
+    }
+  }
+  
+  return frequency;
+}
+ 
+console.log(frequencyEachElement(arr));
