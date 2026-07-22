@@ -232,3 +232,37 @@ const frequencyEachElement = (arr) => {
 }
  
 console.log(frequencyEachElement(arr));
+
+
+
+// Merge two sorted arrays.
+function mergeSortedArrays(arr1, arr2) {
+    let result = [];
+    let i = 0;
+    let j = 0;
+ 
+    for (; i < arr1.length && j < arr2.length;) {
+        if (arr1[i] < arr2[j]) {
+            result.push(arr1[i]);
+            i++;
+        } else {
+            result.push(arr2[j]);
+            j++;
+        }
+    }
+ 
+    for (; i < arr1.length; i++) {
+        result.push(arr1[i]);
+    }
+ 
+    for (; j < arr2.length; j++) {
+        result.push(arr2[j]);
+    }
+ 
+    return result;
+}
+ 
+const arr1 = [1, 3, 5];
+const arr2 = [2, 4, 6];
+ 
+console.log(mergeSortedArrays(arr1, arr2));
