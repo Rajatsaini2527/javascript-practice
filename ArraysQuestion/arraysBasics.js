@@ -266,3 +266,40 @@ const arr1 = [1, 3, 5];
 const arr2 = [2, 4, 6];
  
 console.log(mergeSortedArrays(arr1, arr2));
+
+
+
+// Find the missing number in an array containing numbers from 1 to n.
+ 
+// single missing
+function findMissingNumber(arr, n) {
+    let expectedSum = (n * (n + 1)) / 2;
+    let actualSum = 0;
+ 
+    for (let i = 0; i < arr.length; i++) {
+        actualSum += arr[i];
+    }
+ 
+    return expectedSum - actualSum;
+}
+ 
+const arr = [1, 2, 3, 5, 7];
+const n = 5;
+ 
+console.log(findMissingNumber(arr, n));
+ 
+// multipal missing
+ 
+function findMissingNumbers(arr, n) {
+    let missing = [];
+ 
+    for (let i = 1; i <= n; i++) {
+        if (!arr.includes(i)) {
+            missing.push(i);
+        }
+    }
+ 
+    return missing;
+}
+ 
+console.log(findMissingNumbers([1, 2, 3, 5, 7], 7));
